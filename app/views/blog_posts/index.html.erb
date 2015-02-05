@@ -1,7 +1,10 @@
 <% @blog_posts.each do |t| %>
-<p></p>
 <u>
-  <li><%= t.title %></li>
+  <li>
+    <p>
+      <%= link_to t.title, blog_post_path(t) %>
+    </p>
+  </li>
 </u>
 
 <% end %>

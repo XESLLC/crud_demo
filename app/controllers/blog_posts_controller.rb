@@ -18,6 +18,24 @@ class BlogPostsController < ApplicationController
     @blog_posts = BlogPost.all
   end
 
+  def edit
+    @blog_post = BlogPost.find(params[:id])
+  end
+
+  def show
+    @blog_post = BlogPost.find(params[:id])
+  end
+
+  def update
+    blog_post = BlogPost.find(params[:id])
+    if blog_post.update(params)
+      redirect_to
+    else
+    render :edit
+    end
+  end
+
+
 
  private
 

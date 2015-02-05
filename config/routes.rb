@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :blog_posts, only: [:index, :new, :create]
+  resources :blog_posts
 
   #root 'blog_post#index'
 
