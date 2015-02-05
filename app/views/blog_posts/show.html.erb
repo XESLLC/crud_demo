@@ -12,3 +12,6 @@
 
 </p>
 Edit me here: <%= link_to 'Edit', edit_blog_post_path(@blog_post) %>
+<p>
+  Or Delete <%= link_to 'Delete', blog_post_path(@blog_post), method: :delete %>
+</p>
