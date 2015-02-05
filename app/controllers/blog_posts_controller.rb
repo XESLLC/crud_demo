@@ -28,18 +28,16 @@ class BlogPostsController < ApplicationController
 
   def update
     blog_post = BlogPost.find(params[:id])
-    if blog_post.update(params)
-      redirect_to
+    if blog_post.update (blog_post_params)
+      redirect_to action: :index
     else
-    render :edit
+      render :edit
     end
   end
 
+private
 
-
- private
-
- def blog_post_params
-   params.require(:blog_post).permit(:title, :author, :content)
+def blog_post_params
+  params.require(:blog_post).permit(:title, :author, :content)
   end
 end
