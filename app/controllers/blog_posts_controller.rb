@@ -38,7 +38,7 @@ class BlogPostsController < ApplicationController
   def destroy
     blog_post=BlogPost.find(params[:id])
     blog_post.destroy
-    redirect_to action: :index
+    redirect_to blog_posts_path
   end
 
   private
